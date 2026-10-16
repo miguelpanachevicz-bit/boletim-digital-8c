@@ -11,39 +11,97 @@
   <!-- Cabeçalho com título e subtítulo -->
   <header class="cabecalho">
     <h1>Boletim Digital</h1>
-    <p class="subtitulo">8º Ano — Estudante Exemplo</p>
+    <p class="subtitulo">8º Ano — Turma 8C — Chamada 19</p>
   </header>
 
   <main class="conteudo">
 
-    <!-- Área dos cards de resumo -->
-    <section class="cards" id="cards">
-      <!-- Os cards serão criados pelo JavaScript -->
-    </section>
-
-    <!-- Área da tabela -->
-    <section class="tabela-area">
-      <h2 class="titulo-secao">Notas por Disciplina</h2>
-
-      <div class="tabela-responsiva">
-        <table class="tabela-boletim">
-          <thead>
-            <tr>
-              <th>Disciplina</th>
-              <th>1º Tri</th>
-              <th>2º Tri</th>
-              <th>3º Tri</th>
-              <th>Média</th>
-              <th>Faltas</th>
-              <th>Situação</th>
-            </tr>
-          </thead>
-          <tbody id="corpo-tabela">
-            <!-- As linhas serão criadas pelo JavaScript -->
-          </tbody>
-        </table>
+    <!-- Área de Acesso (PIN) -->
+    <section class="area-login" id="area-login">
+      <div class="card-login">
+        <h2>Acesso ao Boletim</h2>
+        <div class="info-estudante">
+          <p><strong>Série:</strong> 8º Ano</p>
+          <p><strong>Turma:</strong> 8C</p>
+          <p><strong>Número de Chamada:</strong> 19</p>
+        </div>
+        <form id="form-login" class="form-pin">
+          <label for="campo-pin">Digite seu PIN:</label>
+          <input type="password" id="campo-pin" placeholder="PIN de acesso" required maxlength="20" autocomplete="off" />
+          <button type="submit" id="btn-entrar" class="btn-acao">Entrar</button>
+        </form>
+        <div id="mensagem-login" class="mensagem-status"></div>
       </div>
     </section>
+
+    <!-- Área de Conteúdo do Boletim (Escondida até o login) -->
+    <div id="area-boletim" style="display: none;">
+
+      <!-- Barra de Ações -->
+      <div class="barra-acoes">
+        <button id="btn-editar" class="btn-acao">Alterar dados</button>
+        <div id="mensagem-boletim" class="mensagem-status"></div>
+      </div>
+
+      <!-- Área do formulário de edição (Modo edição) -->
+      <section id="area-edicao" class="secao-edicao" style="display: none;">
+        <h2 class="titulo-secao">Editar Notas e Faltas</h2>
+        <form id="form-edicao">
+          <div class="tabela-responsiva">
+            <table class="tabela-boletim tabela-edicao">
+              <thead>
+                <tr>
+                  <th>Disciplina</th>
+                  <th>1º Tri (Nota)</th>
+                  <th>2º Tri (Nota)</th>
+                  <th>3º Tri (Nota)</th>
+                  <th>1º Tri (Faltas)</th>
+                  <th>2º Tri (Faltas)</th>
+                  <th>3º Tri (Faltas)</th>
+                </tr>
+              </thead>
+              <tbody id="corpo-tabela-edicao">
+                <!-- Linhas editáveis criadas via JS -->
+              </tbody>
+            </table>
+          </div>
+          <div class="acoes-edicao">
+            <button type="submit" id="btn-salvar" class="btn-acao btn-salvar">Salvar alterações</button>
+            <button type="button" id="btn-cancelar" class="btn-acao btn-cancelar">Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Área dos cards de resumo -->
+      <section class="cards" id="cards">
+        <!-- Os cards serão criados pelo JavaScript -->
+      </section>
+
+      <!-- Área da tabela -->
+      <section class="tabela-area">
+        <h2 class="titulo-secao">Notas por Disciplina</h2>
+
+        <div class="tabela-responsiva">
+          <table class="tabela-boletim">
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>1º Tri</th>
+                <th>2º Tri</th>
+                <th>3º Tri</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody id="corpo-tabela">
+              <!-- As linhas serão criadas pelo JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
 
   </main>
 

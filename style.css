@@ -42,6 +42,170 @@ body {
   padding: 20px 14px 40px;
 }
 
+/* ===== ÁREA DE LOGIN (PIN) ===== */
+.area-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.card-login {
+  background-color: #1a1a1a;
+  border: 2px solid #ff6a00;
+  border-radius: 14px;
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 20px rgba(255, 106, 0, 0.2);
+}
+
+.card-login h2 {
+  color: #ff9500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.info-estudante {
+  background-color: #262626;
+  border-left: 4px solid #ff6a00;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.info-estudante p {
+  margin-bottom: 4px;
+  color: #ddd;
+}
+
+.info-estudante p:last-child {
+  margin-bottom: 0;
+}
+
+.form-pin {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-pin label {
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.form-pin input[type="password"],
+.input-edicao {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #0d0d0d;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-pin input[type="password"]:focus,
+.input-edicao:focus {
+  border-color: #ff9500;
+  box-shadow: 0 0 6px rgba(255, 149, 0, 0.5);
+}
+
+/* ===== BOTÕES DE AÇÃO ===== */
+.btn-acao {
+  background: linear-gradient(135deg, #ff6a00, #ff9500);
+  color: #000;
+  border: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-acao:hover {
+  background: linear-gradient(135deg, #ff8000, #ffaa00);
+  transform: translateY(-1px);
+}
+
+.btn-cancelar {
+  background: #333;
+  color: #fff;
+}
+
+.btn-cancelar:hover {
+  background: #444;
+}
+
+/* ===== MENSAGENS DE STATUS ===== */
+.mensagem-status {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  min-height: 20px;
+}
+
+.msg-erro {
+  color: #ff3b30;
+}
+
+.msg-sucesso {
+  color: #4cd964;
+}
+
+.msg-info {
+  color: #ff9500;
+}
+
+/* ===== BARRA DE AÇÕES DO BOLETIM ===== */
+.barra-acoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* ===== ÁREA DE EDIÇÃO ===== */
+.secao-edicao {
+  background-color: #1a1a1a;
+  border: 2px solid #ff6a00;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 30px;
+}
+
+.tabela-edicao input.input-edicao {
+  padding: 6px;
+  font-size: 0.85rem;
+  text-align: center;
+  min-width: 60px;
+}
+
+.input-invalido {
+  border-color: #ff3b30 !important;
+  background-color: #2a0000 !important;
+}
+
+.acoes-edicao {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: flex-end;
+}
+
 /* ===== CARDS DE RESUMO ===== */
 .cards {
   display: grid;
@@ -174,5 +338,10 @@ body {
 
   .titulo-secao {
     font-size: 1rem;
+  }
+
+  .barra-acoes {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
