@@ -77,6 +77,35 @@
         <!-- Os cards serão criados pelo JavaScript -->
       </section>
 
+      <!-- Área dos gráficos -->
+      <section class="area-graficos" id="area-graficos">
+
+        <article class="grafico-card">
+          <h2 class="titulo-grafico">Média por disciplina</h2>
+          <div class="grafico-container grafico-container-medios">
+            <canvas id="graficoMediasDisciplinas"></canvas>
+          </div>
+        </article>
+
+        <article class="grafico-card">
+          <h2 class="titulo-grafico">Evolução da média geral</h2>
+          <div class="grafico-container">
+            <canvas id="graficoEvolucaoTrimestres"></canvas>
+          </div>
+        </article>
+
+        <article class="grafico-card" id="card-grafico-faltas">
+          <h2 class="titulo-grafico">
+            Faltas por trimestre
+            <span id="badge-perigo-faltas" class="badge-perigo" style="display: none;">Perigo</span>
+          </h2>
+          <div class="grafico-container">
+            <canvas id="graficoFaltasTrimestres"></canvas>
+          </div>
+        </article>
+
+      </section>
+
       <!-- Área da tabela -->
       <section class="tabela-area">
         <h2 class="titulo-secao">Notas por Disciplina</h2>
@@ -110,6 +139,7 @@
     <p>Projeto escolar — dados fictícios para demonstração.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
